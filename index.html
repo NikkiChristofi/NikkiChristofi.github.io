@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Nikki Christofi</title>
 <style>
   html, body {
@@ -24,8 +25,8 @@
   }
 
   img {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     animation: bobbing 0.6s infinite;
     animation-direction: alternate;
   }
@@ -40,9 +41,65 @@
   }
 
   h1 {
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 20px;
     text-align: center;
+    font-size: 2rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #404C5D;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid transparent;
+  }
+
+  a:hover {
+    color: #110C2D;
+    border-radius: 100%;
+    border: 2px solid #110C2D;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #404C5D;
+      padding: 10px;
+      margin: 5px;
+      border: 2px solid transparent;
+    }
+
+    a:hover {
+      color: #110C2D;
+      border-radius: 100%;
+      border: 2px solid #110C2D;
+    }
+
+    .icon {
+      font-size: 72px;
+    }
   }
 </style>
 </head>
@@ -51,7 +108,25 @@
   <div class="container">
     <h1>Site currently under construction</h1>
     <img src="crane.svg"></img>
+    <div class="social">
+      <a target="_blank" href="https://www.linkedin.com/in/nikkichristofi/">
+        <i class="fa fa-linkedin icon"></i>
+      </a>
+      <a target="_blank" href="https://stackoverflow.com/users/5142595/naadof">
+        <i class="fa fa-stack-overflow icon"></i>
+      </a>
+      <a target="_blank" href="https://github.com/NikkiChristofi">
+        <i class="fa fa-github icon"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/nikkichristofi1/">
+        <i class="fa fa-instagram icon"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/ChristofiNikki">
+        <i class="fa fa-twitter icon"></i>
+      </a>
+    </div>
   </div>
+
 </body>
 
 </html>
