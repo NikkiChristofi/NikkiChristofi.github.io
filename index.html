@@ -3,10 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <title>Nikki Christofi</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f8f9fb;
+    width: 100vw;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+    animation: bobbing 0.6s infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes bobbing {
+      0%{
+          transform: rotate(0) translateY(0);
+      }
+      100%{
+          transform: rotate(0.1deg) translateY(5px);
+      }
+  }
+
+  h1 {
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
 </head>
 
 <body>
-  <h1>Coming soon!</h1>
+  <div class="container">
+    <h1>Site currently under construction</h1>
+    <img src="crane.svg"></img>
+  </div>
 </body>
 
 </html>
