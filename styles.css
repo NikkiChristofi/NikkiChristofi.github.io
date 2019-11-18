@@ -64,6 +64,10 @@ html, body {
   .subtitle {
     font-size: 25px;
   }
+
+  .social-media {
+    margin: 15px auto;
+  }
 }
 
 
@@ -79,5 +83,9 @@ html, body {
 
   .subtitle {
     font-size: 15px;
+  }
+
+  .social-media {
+    margin: 7px auto;
   }
 }
