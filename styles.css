@@ -54,7 +54,6 @@ html, body {
 @media screen and (max-width: 800px) {
   html, body {
     font-size: 22px;
-    background: linear-gradient(100deg, #fdcd3b 45%, #FFED49 45%);
   }
 
   .avatar {
@@ -74,7 +73,6 @@ html, body {
 @media screen and (max-width: 320px) {
   html, body {
     font-size: 12px;
-    background: linear-gradient(100deg, #fdcd3b 45%, #FFED49 45%);
   }
 
   .avatar {
