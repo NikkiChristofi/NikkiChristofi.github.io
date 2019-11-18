@@ -1,0 +1,92 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  //background: #f7f7f7;
+  background: linear-gradient(100deg, #fdcd3b 49%, #FFED49 49%);
+  /* background: linear-gradient(100deg, #eaeaea 49%, #f7f7f7 49%); */
+  font-family: 'Avenir Next';
+  font-size: 45px;
+}
+
+.title {
+  display: table;
+  margin: auto;
+}
+
+.subtitle {
+  display: table;
+  margin: auto;
+  /* margin: -15px auto 0; */
+  font-size: 40px;
+}
+
+.avatar {
+  width: 200px;
+  display: table;
+  margin: auto;
+  padding-top: 25vh;
+}
+
+.social-media {
+  display: table;
+  margin: 20px auto;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.contact-link:hover {
+  color: #403F4C;
+}
+
+@media screen and (max-width: 800px) {
+  html, body {
+    font-size: 22px;
+    background: linear-gradient(100deg, #fdcd3b 45%, #FFED49 45%);
+  }
+
+  .avatar {
+    width: 150px;
+    display: table;
+    margin: auto;
+    padding-top: 5vh;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  html, body {
+    font-size: 12px;
+    background: linear-gradient(100deg, #fdcd3b 45%, #FFED49 45%);
+  }
+
+  .avatar {
+    width: 150px;
+    display: table;
+    margin: auto;
+    padding-top: 5vh;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}

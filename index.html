@@ -1,264 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="css/normalize.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Nikki Christofi</title>
-<style>
-  html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    /* background: #E0D8DE; */
-    color: #404C5D;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .overall-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    border: 1px solid black;
-  }
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  .column {
-    flex-basis: 100%;
-  }
-
-  .padding {
-    padding: 10px;
-  }
-
-  .right-align {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .icon {
-    color: white;
-  }
-
-  #menu {
-    display: none;
-  }
-
-  #fullscreen-menu {
-    display: none;
-  }
-
-
-  @media screen and (min-width: 800px) {
-    .overall-container {
-      max-width: 75%;
-      margin: 0 auto;
-      border: 1px solid black;
-    }
-    
-    .column {
-      flex: 1;
-    }
-
-    #hamburger-menu {
-      display: none;
-    }
-
-    #fullscreen-menu {
-      display: block;
-    }
-
-    .right-align {
-      background: none;
-      position: relative;
-    }
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Nikki Christofi</title>
 </head>
 
 <body>
-  <template id="main-menu">
-      <style>
-        .menu-container {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .menu-link {
-          text-decoration: none;
-          padding: 10px;
-          background: black;
-          color: white;
-        }
-        
-        @media screen and (min-width: 800px) {
-
-          .menu-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-          }
-          .menu-link {
-            text-decoration: none;
-            padding: 0 10px;
-            background: transparent;
-            color: inherit;
-          }
-        }
-      </style>
-      <div class="column menu-container">
-        <a href="#home" class="menu-link" onclick="closeMenu()">Home</a>
-        <a href="#about" class="menu-link" onclick="closeMenu()">About</a>
-        <a href="#contact" class="menu-link" onclick="closeMenu()">Contact</a>
-      </div>
-  </template>
-
-  <div class="overall-container">
-    <div class="row">
-      <div class="column padding">
-          Nikki Christofi
-      </div>
-      <div id="hamburger-menu" class="column padding right-align">
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <div id="fullscreen-menu" class="column padding right-align">
-          <main-menu />
-      </div>
-    </div>
-    <div id="menu" class="row">
-      <main-menu />
-    </div>
+  <div class="avatar">
+    <img src="avatar.svg" />
   </div>
-  
-<script>
-  customElements.define('main-menu',
-    class extends HTMLElement {
-      constructor() {
-        super();
-        let template = document.getElementById('main-menu');
-        let templateContent = template.content;
-
-        const shadowRoot = this.attachShadow({mode: 'open'})
-          .appendChild(templateContent.cloneNode(true));
-    }
-  })
-
-  function toggleMenu() {
-    const menuElement = document.getElementById("menu");
-    if (menuElement.style.display === "block") {
-      menuElement.style.display = "none";
-    } else {
-      menuElement.style.display = "block";
-    }
-  }
-
-  function closeMenu() {
-    const menuElement = document.getElementById("menu");
-    menuElement.style.display = "none";
-  }
-  </script>
+  <h1 class="title">Nikki Christofi</h1>
+  <div class="subtitle">
+    <span>Senior Software Developer</span>
+  </div>
+  <div class="social-media">
+    <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/nikkichristofi/">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://stackoverflow.com/users/5142595/naadof">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://github.com/NikkiChristofi">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://www.instagram.com/nikkichristofi1/">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://twitter.com/ChristofiNikki">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="mailto:nikki.christofi@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
 </body>
 
+<script>
+  var options = {
+    strings: [
+      'default value', 
+      'Wannabe powerlifter',
+      'Reality TV lover',
+      'Senior Software Developer'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 200
+  };
+
+  var typed = new Typed('.subtitle span', options);
+</script>
+
 </html>
-
-<!-- .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-img {
-  height: 200px;
-  width: 200px;
-  animation: bobbing 0.6s infinite;
-  animation-direction: alternate;
-}
-
-@keyframes bobbing {
-    0%{
-        transform: rotate(0) translateY(0);
-    }
-    100%{
-        transform: rotate(0.1deg) translateY(5px);
-    }
-}
-
-h1 {
-  margin: 30px auto;
-  padding: 20px;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.social {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: #404C5D;
-  padding: 10px;
-  margin: 7px;
-  border: 2px solid transparent;
-}
-
-a:hover {
-  color: #110C2D;
-  border-radius: 100%;
-  border: 2px solid #110C2D;
-}
-
-.icon {
-  font-size: 36px;
-} -->
-
-<!-- <div class="container">
-    <h1>Site currently under construction</h1>
-    <img src="crane.svg"></img>
-    <div class="social">
-      <a target="_blank" href="https://www.linkedin.com/in/nikkichristofi/">
-        <i class="fa fa-linkedin icon"></i>
-      </a>
-      <a target="_blank" href="https://stackoverflow.com/users/5142595/naadof">
-        <i class="fa fa-stack-overflow icon"></i>
-      </a>
-      <a target="_blank" href="https://github.com/NikkiChristofi">
-        <i class="fa fa-github icon"></i>
-      </a>
-      <a target="_blank" href="https://www.instagram.com/nikkichristofi1/">
-        <i class="fa fa-instagram icon"></i>
-      </a>
-      <a target="_blank" href="https://twitter.com/ChristofiNikki">
-        <i class="fa fa-twitter icon"></i>
-      </a>
-    </div>
-  </div> -->
