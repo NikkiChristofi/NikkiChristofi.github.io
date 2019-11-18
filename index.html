@@ -1,107 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Nikki Christofi</title>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #E0D8DE;
-    color: #404C5D;
-    width: 100vw;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  img {
-    height: 200px;
-    width: 200px;
-    animation: bobbing 0.6s infinite;
-    animation-direction: alternate;
-  }
-
-  @keyframes bobbing {
-      0%{
-          transform: rotate(0) translateY(0);
-      }
-      100%{
-          transform: rotate(0.1deg) translateY(5px);
-      }
-  }
-
-  h1 {
-    margin: 30px auto;
-    padding: 20px;
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  .social {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-    justify-content: center;
-    padding-top: 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: #404C5D;
-    padding: 10px;
-    margin: 7px;
-    border: 2px solid transparent;
-  }
-
-  a:hover {
-    color: #110C2D;
-    border-radius: 100%;
-    border: 2px solid #110C2D;
-  }
-
-  .icon {
-    font-size: 36px;
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Nikki Christofi</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Site currently under construction</h1>
-    <img src="crane.svg"></img>
-    <div class="social">
-      <a target="_blank" href="https://www.linkedin.com/in/nikkichristofi/">
-        <i class="fa fa-linkedin icon"></i>
-      </a>
-      <a target="_blank" href="https://stackoverflow.com/users/5142595/naadof">
-        <i class="fa fa-stack-overflow icon"></i>
-      </a>
-      <a target="_blank" href="https://github.com/NikkiChristofi">
-        <i class="fa fa-github icon"></i>
-      </a>
-      <a target="_blank" href="https://www.instagram.com/nikkichristofi1/">
-        <i class="fa fa-instagram icon"></i>
-      </a>
-      <a target="_blank" href="https://twitter.com/ChristofiNikki">
-        <i class="fa fa-twitter icon"></i>
-      </a>
-    </div>
+  <div class="avatar">
+    <img src="avatar.svg" />
   </div>
-
+  <h1 class="title">Nikki Christofi</h1>
+  <div class="subtitle">
+    <span>Senior Software Developer</span>
+  </div>
+  <div class="social-media">
+    <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/nikkichristofi/">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://stackoverflow.com/users/5142595/naadof">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://github.com/NikkiChristofi">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://www.instagram.com/nikkichristofi1/">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="https://twitter.com/ChristofiNikki">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="contact-link" target="_blank" href="mailto:nikki.christofi@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
 </body>
+
+<script>
+  var options = {
+    strings: [
+      'default value', 
+      'Wannabe powerlifter',
+      'Reality TV lover',
+      'Senior Software Developer'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 200
+  };
+
+  var typed = new Typed('.subtitle span', options);
+</script>
 
 </html>
