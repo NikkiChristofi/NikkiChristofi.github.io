@@ -13,9 +13,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: black;
-  //background: #f7f7f7;
   background: linear-gradient(100deg, #fdcd3b 49%, #FFED49 49%);
-  /* background: linear-gradient(100deg, #eaeaea 49%, #f7f7f7 49%); */
   font-family: 'Avenir Next';
   font-size: 45px;
 }
@@ -28,7 +26,6 @@ html, body {
 .subtitle {
   display: table;
   margin: auto;
-  /* margin: -15px auto 0; */
   font-size: 40px;
 }
 
@@ -62,9 +59,6 @@ html, body {
 
   .avatar {
     width: 150px;
-    display: table;
-    margin: auto;
-    padding-top: 5vh;
   }
 
   .subtitle {
@@ -80,10 +74,7 @@ html, body {
   }
 
   .avatar {
-    width: 150px;
-    display: table;
-    margin: auto;
-    padding-top: 5vh;
+    width: 100px;
   }
 
   .subtitle {
